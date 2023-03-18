@@ -1,0 +1,24 @@
+#include<stdio.h>  // occurence of a given number
+int main()
+{
+    int size, a[100], i, count = 0;
+    printf("enter size of array = ");
+    scanf("%d", &size);
+    printf("input all elements in array\n");
+    for(i=0;i<size;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    int n;
+    printf("enter number = ");
+    scanf("%d",&n);
+    for(i=0;i<size;i++)
+    {
+        if(a[i] == n)
+        {
+            count ++;
+        }
+    }
+    printf("no. of occurence of %d in array = %d", n, count);
+    return 0;
+}
