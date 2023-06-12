@@ -1,0 +1,28 @@
+#include <stdio.h>
+int main()
+{
+    int num, arr1[100];
+    printf("Enter number of terms to be stored in array: ");
+    scanf("%d", &num);
+    int i, j;
+    printf("Enter %d elements\n", num);
+    for (i = 1; i <= num; i++)
+    {
+        printf("Element %d - ", i);
+        scanf("%d", &arr1[i]);
+    }
+    int arr2[100];
+    for (i = 1; i <= num; i++)
+    {
+        for (j = i; j <= num; j++)
+        {
+            arr2[j] = arr1[i];
+        }
+    }
+    printf("Printing the copied elements\n");
+    for (j = 1; j <= num; j++)
+    {
+        printf("%d ", arr2[j]);
+    }
+    return 0;
+}
